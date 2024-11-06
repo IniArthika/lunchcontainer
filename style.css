@@ -1,0 +1,176 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+
+.navbar-brand {
+    font-family: "Alatsi", sans-serif;
+    font-weight: 400;
+    font-style: bold;
+    padding-left: 100px;
+    font-size: 30px;
+  }
+  
+
+.moul-regular {
+    font-family: "Moul", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+.login-button.moul-regular {
+  background-color: #94CDEC;
+  color: aliceblue;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s background-color;
+}
+
+.login-button.moul-regular:hover {
+  background-color: aqua;
+}
+
+.nav-link {
+  color: #666777;
+  font-weight: 500;
+  
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #001;
+  
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.float-image {
+    width: 250px;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image {
+  width: 200px;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+.text-section {
+  flex: 1;
+  text-align: center;
+  padding: 0 20px;
+  
+}
+
+.text-section p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3C718D;
+  font-family: 'Moul', serif;
+}
+
+
+.header {
+    margin: 20px 0;
+}
+
+.header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 575px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card {
+    background-color: #D3F4A5;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    margin-left: 75px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.tupperware-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 650px;
+}
+
+.tupperware-logo {
+    width: 150px;
+    margin: 30px ;
+}
+
+.tupperware-stamp {
+    width: 100px;
+    margin: 30px;
+    margin-left: 52px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+

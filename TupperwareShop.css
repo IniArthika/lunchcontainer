@@ -1,0 +1,62 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+
+.navbar-brand {
+    font-family: "Alatsi", sans-serif;
+    font-weight: 400;
+    font-style: bold;
+    padding-left: 100px;
+    font-size: 30px;
+  }
+
+.navbar-brand img {
+    max-width: 150px;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.card {
+    border: 1px solid #eaeaea;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.btn-success {
+    background-color: #D5ED9F;
+  color: rgb(17, 18, 19);
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s background-color;
+}
+
+footer {
+    background-color: #222;
+}
+
+footer p, footer a {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+footer .social-icons i {
+    font-size: 2px;
+}
+
+.footer.text-start {
+    color: #eaeaea;
+    margin-left: 30px;
+}
+
+
+
+
+                    
