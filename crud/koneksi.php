@@ -1,13 +1,14 @@
-<?php
+<?php 
+    $rootDir = $_SERVER['DOCUMENT_ROOT'].'/mlaku/';
+    $server = "localhost"; // nama server
+    $user = "root";
+    $pass = '';
+    $db = "lunch_container"; // nama database 
 
-$host="localhost";
-$user="root";
-$password="";
-$db="lunch_container";
+    $koneksi = mysqli_connect($server, $user, $pass, $db);
 
-$kon = mysqli_connect($host,$user,$password,$db);
-if (!$kon){
-        die("Koneksi Gagal:".mysqli_connect_error());
-        
-}
+    if(mysqli_connect_errno()) {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        exit();
+    }
 ?>
