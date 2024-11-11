@@ -1,47 +1,43 @@
-<?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Check if the file was uploaded without errors
-    if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
+<?php 
 
-        $nama = $_POST['nama'];
-        $deskripsi = $_POST['deskripsi'];
-        $harga = $_POST['harga'];
+if(isset($_POST['btnInputBarang'])){
 
-        $fileTmpPath = $_FILES['image']['tmp_name'];
-        $fileName = $_FILES['image']['name'];
-        $fileSize = $_FILES['image']['size'];
-        $fileType = $_FILES['image']['type'];
+    // mengambil semua data dari form ke dalam variabel lokal
+    $name = htmlspecialchars($_POST['nama']); // mengambil data nama yang berasal dari form 
+    $description = $_POST['deskripsi'];
+    $price = $_POST['harga'];
+    $category = $_POST['kategori'];
+    
+    
+
+    // variabel array associative 
+    $data = [ 
+        'nama' => $name,
+        'deskripsi' => $description,
+        'harga' => $price,
+        'kategori' => $category,
         
-        // Define allowed file types
-        $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
         
-        if (in_array($fileType, $allowedTypes)) {
-            // Specify the target directory for uploads
-            $uploadDir = 'uploads/';
-            $destinationPath = $uploadDir . basename($fileName);
-            
-            // Move the uploaded file to the destination directory
-            if (move_uploaded_file($fileTmpPath, $destinationPath)) {
-            } else {
-                echo "Error moving the uploaded file.";
-            }
+    ];
 
-            
-        } else {
-            echo "Unsupported file type.";
-        }
-    } else {
-        echo "Error uploading file.";
+    $validasi = validasiData($data);
+
+    if($validasi == 0 ){
+        echo "data sudah lengkap siap di inputkan";
+        $result = inputbarang($data, $koneksi);
+        if($result) header("location:input_prouduct.php?status=1");
+        else header("location:input_product.php?errno=1");
     }
-
+    else {
+        echo "data $validasi kurang";
+    }
 }
-
 ?>
 
 
 
 
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,4 +69,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 </body>
-</html>
+</html> -->
