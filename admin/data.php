@@ -38,31 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 ?>
 
-<?php
-// mengambil semua data dari form ke dalam variabel lokal
-$nama = htmlspecialchars($_POST['nama']); // mengambil data nama yang berasal dari form 
-$deskripsi = $_POST['deskripsi'];
-$harga = $_POST['harga'];
-$image = $_POST['image'];
-
-
-// variabel array associative
-$data =[
-    "Nama Barang" => $nama,
-    "Deskripsi" => $deskripsi,
-    "Harga" => $harga,
-    "Foto" => $image
-];
-
-$validasi = validasiData($data);
-    if($validasi == 0 ){
-        echo "data sudah lengkap siap di inputkan";
-    }
-    else {
-        echo "data $validasi kurang";
-    }
-
-?>
 
 
 
