@@ -29,6 +29,7 @@
             <th>Deskripsi</th>
             <th>Harga</th>
             <th>Kategori</th>
+            <th>Gambar</th>
             <th colspan3>Menu</th>
         </tr>
         <?php 
@@ -42,6 +43,7 @@
             <td>deskripsi</td>
             <td>harga</td>
             <td>kategori_id</td>
+            <td>Gambar</td>
             <td>edit</td>
             <td>delete</td>
         </tr>

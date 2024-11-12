@@ -3,20 +3,21 @@
 if(isset($_POST['btnInputBarang'])){
 
     // mengambil semua data dari form ke dalam variabel lokal
-    $name = htmlspecialchars($_POST['nama']); // mengambil data nama yang berasal dari form 
-    $description = $_POST['deskripsi'];
-    $price = $_POST['harga'];
-    $category = $_POST['kategori'];
+    $nama = htmlspecialchars($_POST['nama']); // mengambil data nama yang berasal dari form 
+    $deskripsi = $_POST['deskripsi'];
+    $harga = $_POST['harga'];
+    $kategori = $_POST['kategori'];
+    $gambar = $_POST['gambar'];
     
     
 
     // variabel array associative 
     $data = [ 
-        'nama' => $name,
-        'deskripsi' => $description,
-        'harga' => $price,
-        'kategori' => $category,
-        
+        'nama' => $nama,
+        'deskripsi' => $deskripsi,
+        'harga' => $harga,
+        'kategori' => $kategori,
+        'gambar' => $gambar
         
     ];
 
@@ -25,7 +26,7 @@ if(isset($_POST['btnInputBarang'])){
     if($validasi == 0 ){
         echo "data sudah lengkap siap di inputkan";
         $result = inputbarang($data, $koneksi);
-        if($result) header("location:input_prouduct.php?status=1");
+        if($result) header("location:input_product.php?status=1");
         else header("location:input_product.php?errno=1");
     }
     else {

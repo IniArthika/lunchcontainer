@@ -30,7 +30,7 @@
                     </div>
                     
                     <div class="mb-3">
-                        <label for="category" class="form-label">Kategori</label>
+                        <label for="category_id" class="form-label">Kategori</label>
                         <select class="form-select" name="kategori">
                                 <option selected value="0">--Pilih Kategori--</option>
                                 <option value="1">Tumbler</option>
@@ -38,11 +38,14 @@
                                 <option value="3">One Set(tumbler & bekal)</option>
                         </select>
                     </div>
-                    
+                    <div class="mb-3">
+                        <label for="coverBuku">Gambar Barang</label>
+                        <input type="file" name="gambar" id="" class="form-control" />
+                    </div>
     
 
                     <div class="mb-3">
-                        <input type="submit" value="Input Data Buku" class="btn btn-primary" name="btnInputBarang">
+                        <input type="submit" value="Input Data Barang" class="btn btn-primary" name="btnInputBarang">
                     </div>
 
 
